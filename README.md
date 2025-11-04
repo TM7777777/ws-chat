@@ -2,7 +2,11 @@
 
 Real-time chat application with room support and confetti animations.
 
-![demo](https://github.com/TM7777777/ws-chat/blob/main/examples/wschat.mp4?raw=true)
+
+
+https://github.com/user-attachments/assets/cf5d1501-4555-40ce-9d69-7e5ec5d51745
+
+
 
 ## Tech Stack
 
