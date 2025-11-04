@@ -18,7 +18,6 @@ export const leaveRoom = () => ({
   type: types.LEAVE_ROOM,
 });
 
-// Room data actions
 export const roomsListReceived = (rooms) => ({
   type: types.ROOMS_LIST_RECEIVED,
   payload: rooms,

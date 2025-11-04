@@ -15,7 +15,7 @@ const RoomsPage = () => {
   }, [username, navigate]);
 
   if (!username) {
-    return null; // Will redirect
+    return null;
   }
 
   return <RoomSelection />;

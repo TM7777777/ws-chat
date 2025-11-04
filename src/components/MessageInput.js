@@ -70,14 +70,7 @@ const MessageInput = () => {
   return (
     <div className="input-container">
       {error && (
-        <div
-          className="error-message"
-          style={{
-            color: 'red',
-            fontSize: '12px',
-            marginBottom: '8px',
-            textAlign: 'center',
-          }}>
+        <div className="error-message">
           {error}
         </div>
       )}

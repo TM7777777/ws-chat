@@ -1,6 +1,14 @@
 import { take, call, put, fork, cancelled, delay, select, cancel } from 'redux-saga/effects';
 import { eventChannel } from 'redux-saga';
-import { webSocketConnected, webSocketDisconnected, webSocketConnectionError, setConnectionStatus, messageReceived, messageHistoryReceived, messageError } from './actions';
+import {
+  webSocketConnected,
+  webSocketDisconnected,
+  webSocketConnectionError,
+  setConnectionStatus,
+  messageReceived,
+  messageHistoryReceived,
+  messageError,
+} from './actions';
 import { roomsListReceived, roomJoined, userJoinedRoom, userLeftRoom } from '../rooms/actions';
 import { CONNECT_WEBSOCKET } from './actionTypes';
 import config from '../../config';
@@ -161,7 +169,7 @@ function* attemptReconnection() {
       }
 
       attempts++;
-      const delayTime = baseDelay * Math.pow(2, attempts - 1); // Exponential backoff
+      const delayTime = baseDelay * Math.pow(2, attempts - 1);
       console.log(`Reconnection attempt ${attempts}/${maxAttempts} in ${delayTime}ms...`);
 
       yield delay(delayTime);
