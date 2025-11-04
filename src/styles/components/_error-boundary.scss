@@ -1,0 +1,76 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.error-boundary {
+  @include flex-center;
+  min-height: 100vh;
+  background-color: $background-color;
+  padding: 20px;
+  
+  .error-boundary-container {
+    background: var(--white);
+    border: 1px solid $border-color;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: $shadow;
+    text-align: center;
+    max-width: 500px;
+    
+    h1 {
+      color: #dc3545;
+      margin: 0 0 16px 0;
+      font-size: 24px;
+    }
+    
+    p {
+      color: $text-color;
+      margin: 0 0 24px 0;
+      line-height: 1.5;
+    }
+    
+    .error-actions {
+      margin-bottom: 24px;
+      
+      .error-reload-btn {
+        @include button-style($primary-color, $primary-hover);
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+    
+    .error-details {
+      text-align: left;
+      margin-top: 24px;
+      border: 1px solid #dc3545;
+      border-radius: 8px;
+      
+      summary {
+        padding: 12px;
+        background: #f8d7da;
+        color: #721c24;
+        cursor: pointer;
+        border-radius: 8px 8px 0 0;
+        font-weight: bold;
+        
+        &:hover {
+          background: #f1b2b5;
+        }
+      }
+      
+      .error-stack {
+        padding: 16px;
+        margin: 0;
+        background: #fff5f5;
+        color: #721c24;
+        font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        font-size: 12px;
+        line-height: 1.4;
+        overflow-x: auto;
+        white-space: pre-wrap;
+        border-radius: 0 0 8px 8px;
+      }
+    }
+  }
+}

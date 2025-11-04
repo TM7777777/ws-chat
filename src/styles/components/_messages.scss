@@ -1,0 +1,103 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.messages-container {
+  position: relative;
+  margin-top: 40px;
+  z-index: 10;
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+.messages-list {
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 400px;
+  pointer-events: auto;
+}
+
+.no-messages {
+  @include flex-center;
+  flex-direction: column;
+  height: 100%;
+  pointer-events: none;
+  
+  .no-messages-container {
+    background: var(--white);
+    border: 1px solid $border-color;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: $shadow;
+    text-align: center;
+    max-width: 300px;
+    pointer-events: auto;
+
+    
+    .no-messages-text {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: $text-color;
+    }
+    
+    .no-messages-subtext {
+      font-size: 14px;
+      opacity: 0.7;
+      color: $text-color;
+    }
+  }
+}
+
+.message {
+  padding: 12px 16px;
+  background: var(--message-bg);
+  border-bottom: 1px solid $border-color;
+  word-wrap: break-word;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  min-width: 200px;
+  width: fit-content;
+  max-width: 80%;
+  
+  .message-content {
+    margin-bottom: 4px;
+    
+    .message-username {
+      font-weight: bold;
+      color: $primary-color;
+    }
+    
+    .message-text {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+  
+  .message-time {
+    font-size: 11px;
+    opacity: 0.6;
+    color: $text-light;
+  }
+}
+
+.message-system {
+  text-align: center;
+  padding: 8px 16px;
+  background: var(--system-message-bg);
+  border-bottom: none;
+  border-radius: 12px;
+  margin: 0 auto;
+  width: fit-content;
+  
+  .message-text {
+    font-size: 12px;
+    color: $text-color;
+    font-style: italic;
+  }
+}

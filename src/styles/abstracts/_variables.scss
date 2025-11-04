@@ -1,0 +1,56 @@
+// Theme Variables
+:root {
+  // Light theme
+  --primary-color: #4267b2;
+  --primary-hover: #365899;
+  --success-color: #42b883;
+  --success-hover: #369870;
+  --background-color: #f0f2f5;
+  --white: #ffffff;
+  --light-gray: #f8f9fa;
+  --border-color: #e1e5e9;
+  --text-color: #050505;
+  --text-light: #000000;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --input-bg: #ffffff;
+  --message-bg: #e4e6ea;
+  --system-message-bg: rgba(66, 103, 178, 0.2);
+  --room-card-bg: #ffffff;
+  --room-card-hover-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --username-form-bg: linear-gradient(180deg, #e8f5e9 0%, #c8e6c9 100%);
+  --input-container-bg: #f8f9fa;
+}
+
+[data-theme="dark"] {
+  // Dark theme
+  --primary-color: #5a82f7;
+  --primary-hover: #4c6fde;
+  --success-color: #4ade80;
+  --success-hover: #22c55e;
+  --background-color: #0f1419;
+  --white: #1a1f2e;
+  --light-gray: #2a2f3e;
+  --border-color: #3a3f4e;
+  --text-color: #e2e8f0;
+  --text-light: #000000;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --input-bg: #2a2f3e;
+  --message-bg: #3a3f4e;
+  --system-message-bg: rgba(90, 130, 247, 0.3);
+  --room-card-bg: #2a2f3e;
+  --room-card-hover-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  --username-form-bg: linear-gradient(180deg, #1e293b 0%, #334155 100%);
+  --input-container-bg: #1e293b;
+}
+
+$primary-color: var(--primary-color);
+$primary-hover: var(--primary-hover);
+$success-color: var(--success-color);
+$success-hover: var(--success-hover);
+$background-color: var(--background-color);
+$white: var(--white);
+$light-gray: var(--light-gray);
+$border-color: var(--border-color);
+$text-color: var(--text-color);
+$text-light: var(--text-light);
+$shadow: var(--shadow);
